@@ -1,7 +1,11 @@
 "use client";
+import { useState } from "react";
 import Chat from "./components/Chat";
+import Menu from "./components/Menu";
 
 export default function Home() {
+  const [showChat, setShowChat] = useState(false); // State to toggle views
+
   return (
     <div className="relative w-full h-screen flex justify-center items-center">
       {/* Background Video */}
@@ -17,11 +21,11 @@ export default function Home() {
       </video>
 
       {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-black opacity-50  z-10"></div>
+      <div className="absolute inset-0 backdrop-blur-sm z-10"></div>
 
-      {/* Chat Component */}
+      {/* Content Switch */}
       <div className="relative z-20 w-full h-full flex items-center justify-center p-4">
-        <Chat />
+        {showChat ? <Chat setShowChat={setShowChat} /> : <Menu setShowChat={setShowChat} />}
       </div>
     </div>
   );
