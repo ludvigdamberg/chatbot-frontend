@@ -13,3 +13,5 @@ pnpm dev
 # or
 bun dev
 ```
+
+## I will add the chatbot code, after a clean up
