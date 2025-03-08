@@ -51,14 +51,14 @@ const Menu = ({ setShowChat }) => {
             {/* Bottom Section - Responsive Behavior */}
             <div className="grid gap-1 lg:grid-cols-3 grid-cols-2 grid-rows-1 ">
                 {/* Left Section - About (2/3 on large, square on mobile) */}
-                <Link href="https://github.com/ludvigdamberg"
+                <Link href="https://github.com/ludvigdamberg/chatbot-frontend"
                     className="lg:grid lg:grid-cols-2 flex flex-col bg-neutral-950 text-white text-sm font-semibold rounded-lg cursor-pointer transition hover:scale-[101%] lg:col-span-2 lg:h-full h-full"
                 >
                     <div className=" flex">
                         <p className=" m-2 font-bold text-2xl">{"Github"}</p>
                         <FiGithub className=" my-3 text-2xl" />
                     </div>
-                    <div className="flex my-auto md:my-0"> <Lottie animationData={gitData} loop={true} className=" max-w-[160px] mx-auto max-h-[160px] my-auto" /></div>
+                    <div className="flex mx-auto lg:mr-auto my-auto lg:my-0"> <Lottie animationData={gitData} loop={true} className=" w-[80px] h-[80px] lg:w-[150px] lg:h-[150px] my-auto" /></div>
 
 
 
@@ -73,7 +73,7 @@ const Menu = ({ setShowChat }) => {
                         <p className=" font-bold text-2xl">{"How to"}</p>
                         <FaWrench className=" text-2xl my-1" />
                     </div>
-                    <div className="flex mx-auto my-auto"> <Lottie animationData={buildData} loop={true} className=" max-w-[150px] max-h-[150px] mx-auto my-auto" /></div>
+                    <div className="flex mx-auto my-auto"> <Lottie animationData={buildData} loop={true} className=" w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] mx-auto my-auto" /></div>
 
                 </Link>
             </div>
